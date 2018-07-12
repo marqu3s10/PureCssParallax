@@ -8,9 +8,18 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header>
-    <h1>Parallax effect</h1>
-    <p>Pure CSS</p>
-  </header>
-  <div class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex beatae, impedit eos quo maxime maiores nulla perspiciatis, repellat, sint a ipsam modi. Nobis adipisci ipsum omnis aspernatur rerum. Facilis aliquam quo sed voluptatibus, voluptate repellendus neque illo ducimus velit ut!</div>
+  <div class="parallax">
+    <div class="parallax__group">
+      <div class="parallax__layer parallax__layer--back"> 
+        <div class="title">Background layer</div>
+      </div>
+      <div class="parallax__layer parallax__layer--base"> 
+        <div class="title">Base layer</div>
+      </div>
+      <div class="parallax__layer parallax__layer--deep">
+        <div class="title">Deep layer</div>
+      </div>
+    </div>
+    <div class="parallax__group"></div>
+  </div>
 </body>

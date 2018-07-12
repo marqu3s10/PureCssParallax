@@ -5,10 +5,20 @@ head
   meta(name="viewport", content="width=device-width, initial-scale=1.0")
   meta(http-equiv="X-UA-Compatible", content="ie=edge")
   title Document
-  link(rel="stylesheet", href="../style.css")
+  link(rel="stylesheet", href="style.css")
 body
-  header
-    h1 Parallax effect
-    p Pure CSS
+  //- header
+  //-   h1 Parallax effect
+  //-   p Pure CSS
     
-  div.lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex beatae, impedit eos quo maxime maiores nulla perspiciatis, repellat, sint a ipsam modi. Nobis adipisci ipsum omnis aspernatur rerum. Facilis aliquam quo sed voluptatibus, voluptate repellendus neque illo ducimus velit ut!
+  //- div.lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex beatae, impedit eos quo maxime maiores nulla perspiciatis, repellat, sint a ipsam modi. Nobis adipisci ipsum omnis aspernatur rerum. Facilis aliquam quo sed voluptatibus, voluptate repellendus neque illo ducimus velit ut!
+
+  .parallax
+    .parallax__group
+      .parallax__layer.parallax__layer--back 
+        .title Background layer
+      .parallax__layer.parallax__layer--base 
+        .title Base layer
+      .parallax__layer.parallax__layer--deep
+        .title Deep layer
+    .parallax__group
