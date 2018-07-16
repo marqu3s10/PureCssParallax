@@ -4,21 +4,56 @@ head
   meta(charset="UTF-8")
   meta(name="viewport", content="width=device-width, initial-scale=1.0")
   meta(http-equiv="X-UA-Compatible", content="ie=edge")
-  title Document
+  title Parallax!
   link(rel="stylesheet", href="style.css")
 body
-  //- header
-  //-   h1 Parallax effect
-  //-   p Pure CSS
-    
-  //- div.lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex beatae, impedit eos quo maxime maiores nulla perspiciatis, repellat, sint a ipsam modi. Nobis adipisci ipsum omnis aspernatur rerum. Facilis aliquam quo sed voluptatibus, voluptate repellendus neque illo ducimus velit ut!
 
   .parallax
-    .parallax__group
+    #group1.parallax__group
+      .parallax__layer.parallax__layer--base 
+        .title Base layer
+
+    #group2.parallax__group
       .parallax__layer.parallax__layer--back 
         .title Background layer
       .parallax__layer.parallax__layer--base 
         .title Base layer
+    
+    #group3.parallax__group
+      .parallax__layer.parallax__layer--base
+        .title Base layer
+      .parallax__layer.parallax__layer--fore
+        .title Foreground layer
+        
+    #group4.parallax__group
       .parallax__layer.parallax__layer--deep
         .title Deep layer
-    .parallax__group
+      .parallax__layer.parallax__layer--back 
+        .title Background layer 
+      .parallax__layer.parallax__layer--base
+          .title Base layer
+             
+    #group5.parallax__group
+      .parallax__layer.parallax__layer--base 
+        .title Base layer
+      .parallax__layer.parallax__layer--fore
+        .title Foreground layer
+        
+    #group6.parallax__group
+        .parallax__layer.parallax__layer--back 
+          .title Background layer
+        .parallax__layer.parallax__layer--base 
+          .title Base layer
+          
+    #group7.parallax__group
+      .parallax__layer.parallax__layer--base 
+        .title Base layer
+  
+  .debug
+    label 
+      input(type="checkbox")
+      |  Debug
+      
+  
+  
+  script(src="script.js")

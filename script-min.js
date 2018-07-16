@@ -1,0 +1,1 @@
+function toggleDebug(){document.body.classList.toggle("debug-on",debugInput.checked)}var debugInput=document.querySelector("input");debugInput.addEventListener("click",toggleDebug);

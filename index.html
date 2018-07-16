@@ -4,22 +4,69 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <title>Document</title>
+  <title>Parallax!</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <div class="parallax">
-    <div class="parallax__group">
+    <div id="group1" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base"> 
+        <div class="title">Base layer</div>
+      </div>
+    </div>
+    <div id="group2" class="parallax__group">
       <div class="parallax__layer parallax__layer--back"> 
         <div class="title">Background layer</div>
       </div>
       <div class="parallax__layer parallax__layer--base"> 
         <div class="title">Base layer</div>
       </div>
+    </div>
+    <div id="group3" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="title">Base layer</div>
+      </div>
+      <div class="parallax__layer parallax__layer--fore">
+        <div class="title">Foreground layer</div>
+      </div>
+    </div>
+    <div id="group4" class="parallax__group">
       <div class="parallax__layer parallax__layer--deep">
         <div class="title">Deep layer</div>
       </div>
+      <div class="parallax__layer parallax__layer--back"> 
+        <div class="title">Background layer </div>
+      </div>
+      <div class="parallax__layer parallax__layer--base">
+        <div class="title">Base layer</div>
+      </div>
     </div>
-    <div class="parallax__group"></div>
+    <div id="group5" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base"> 
+        <div class="title">Base layer</div>
+      </div>
+      <div class="parallax__layer parallax__layer--fore">
+        <div class="title">Foreground layer</div>
+      </div>
+    </div>
+    <div id="group6" class="parallax__group">
+      <div class="parallax__layer parallax__layer--back"> 
+        <div class="title">Background layer</div>
+      </div>
+      <div class="parallax__layer parallax__layer--base"> 
+        <div class="title">Base layer</div>
+      </div>
+    </div>
+    <div id="group7" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base"> 
+        <div class="title">Base layer</div>
+      </div>
+    </div>
   </div>
+  <div class="debug">
+    <label> 
+      <input type="checkbox"/> Debug
+    </label>
+  </div>
+  <script src="script.js"></script>
 </body>
