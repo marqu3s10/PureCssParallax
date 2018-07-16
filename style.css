@@ -12,7 +12,7 @@ body, html {
   color: #fff; }
 
 .debug-on .parallax__group {
-  transform: translate3d(700px, 0, -800px) rotateY(30deg); }
+  transform: translate3d(700px, 0, -798px) rotateY(30deg); }
 
 .debug-on .parallax__layer {
   box-shadow: 0 0 5px 1px #000;
@@ -21,8 +21,8 @@ body, html {
 .parallax {
   perspective: 300px;
   height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto; }
+  overflow: hidden auto;
+  perspective-origin-x: 100%; }
 
 .parallax__group {
   position: relative;
@@ -35,7 +35,8 @@ body, html {
   top: 0;
   right: 0;
   left: 0;
-  bottom: 0; }
+  bottom: 0;
+  transform-origin-x: 100%; }
   .parallax__layer--fore {
     transform: translateZ(100px) scale(0.6666);
     z-index: 5; }
