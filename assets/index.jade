@@ -9,15 +9,20 @@ head
 body
 
   .parallax
-    #group1.parallax__group
+    header.parallax__group
+      .parallax__layer.parallax__layer--back.bg--header-parallax
+    
       .parallax__layer.parallax__layer--base 
-        .title Base layer
+        .title.title--header-parallax Parallax CSS
+        
+    section.parallax__group
+      .parallax__layer.parallax__layer--base 
+        .title.title--normal How it works?
 
-    #group2.parallax__group
-      .parallax__layer.parallax__layer--back 
-        .title Background layer
-      .parallax__layer.parallax__layer--base 
-        .title Base layer
+    .parallax__group
+    .parallax__group
+    
+    
     
     #group3.parallax__group
       .parallax__layer.parallax__layer--base

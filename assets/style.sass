@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500')
+@font-face
+  font-family: Penna
+  src: url("../assets/fonts/penna.otf") format("opentype")
+
 $perspective: 300px
 $c-fore: #2a78d2
 $c-base: #4b93e7
@@ -6,16 +11,19 @@ $c-deep: #9fbde0
 
 body, html
   margin: 0
-  font-family: Montserrat
+  font-family: 'Poppins', sans-serif
+  font-weight: 400
 
 .debug
   position: fixed
   top: .5rem
   left: .5rem
-  padding: 1em .6em
   background: #1f1b29
   border-radius: 5px
   color: #fff
+  label
+    display: inline-block
+    padding: 1em .6em
 
 .debug-on
   .parallax__group
@@ -60,13 +68,7 @@ body, html
     transform: translateZ(-$perspective * 2) scale(3)
     z-index: 2
 
-  .title
-    position: absolute
-    left: 50%
-    top: 50%
-    transform: translate(-50%, -50%)
-    text-align: center
-    font-size: 200%
+
 
 #group1, #group3, #group5, #group7
   z-index: 4
@@ -82,3 +84,27 @@ body, html
   z-index: 2
   .parallax__layer--deep
     background: $c-deep
+
+
+.title
+  &--normal
+
+  &--header-parallax
+    position: absolute
+    left: 50%
+    top: 40%
+    transform: translate(-50%, -50%)
+    text-align: center
+    color: #fff
+    font-size: 4rem
+
+.bg
+  &--header-parallax
+    background:
+      image: url(../assets/img/bg.jpg)
+      size: auto 100%
+      position: center
+
+#idk .parallax__layer
+  &--base
+    background: #fff
