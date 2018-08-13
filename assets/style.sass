@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500')
 @font-face
-  font-family: Penna
-  src: url("../assets/fonts/penna.otf") format("opentype")
+  font-family: SF-Display
+  src: url("../assets/fonts/SF-Pro-Display-Thin.otf") format("opentype")
+@font-face
+  font-family: SF-Text
+  src: url("../assets/fonts/SF-Pro-Text-Regular.otf") format("opentype")
+SF-Pro-Text-Regular
 
 $perspective: 300px
 $c-fore: #2a78d2
@@ -9,10 +13,16 @@ $c-base: #4b93e7
 $c-back: #6ea4e3
 $c-deep: #9fbde0
 
-body, html
+*
+  box-sizing: border-box
+
+body, html, h1, h2, h3, h4, h5, h6
   margin: 0
-  font-family: 'Poppins', sans-serif
+  font-family: 'SF-Display', sans-serif
   font-weight: 400
+
+p
+  font-family: "SF-Text" , sans-serif
 
 .debug
   position: fixed
@@ -39,34 +49,85 @@ body, html
   overflow: hidden auto
   perspective-origin-x: 100%
 
-.parallax__group
-  position: relative
-  height: 100vh
-  transform-style: preserve-3d
-  transition: .5s transform
+  &__group
+    position: relative
+    height: 100vh
+    transform-style: preserve-3d
+    transition: .5s transform
 
-.parallax__layer
-  position: absolute
-  top: 0
-  right: 0
-  left: 0
-  bottom: 0
-  transform-origin-x: 100%
+  &__layer
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    transform-origin-x: 100%
 
-  &--fore
-    transform: translateZ(100px) scale(.6666)
-    z-index: 5
-  &--base
-    transform: translateZ(0)
-    z-index: 4
+    &--fore
+      transform: translateZ(100px) scale(.6666)
+      z-index: 5
+    &--base
+      // transform: translateZ(0)
+      z-index: 4
 
-  &--back
-    transform: translateZ(-$perspective) scale(2)     // scale = 1 + (translateZ * -1 / perspective)
-    z-index: 3
+    &--back
+      transform: translateZ(-$perspective) scale(2)     // scale = 1 + (translateZ * -1 / perspective)
+      z-index: 3
 
-  &--deep
-    transform: translateZ(-$perspective * 2) scale(3)
-    z-index: 2
+    &--deep
+      transform: translateZ(-$perspective * 2) scale(3)
+      z-index: 2
+
+
+.block
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 5em 3em
+  background: #fff
+  height: auto
+  transform: translateZ(0)
+
+  &--x
+    flex-direction: row
+
+
+.title
+  font-size: 3em
+  padding: .5em 0
+
+  &--center
+    text-align: center
+
+  &--header-parallax
+    position: absolute
+    left: 50%
+    top: 40%
+    margin: 0
+    transform: translate(-50%, -50%)
+    text-align: center
+    color: #fff
+    font-size: 5em
+    letter-spacing: .2em
+.text
+  &--short
+    max-width: 500px
+  &--center
+    text-align: center
+
+.bg
+  &--normal
+    background-color: #fff
+
+  &--header-parallax
+    background:
+      image: url(../assets/img/bg2.jpg)
+      size: auto 100%
+      position: center
+
+
+
+
 
 
 
@@ -84,27 +145,3 @@ body, html
   z-index: 2
   .parallax__layer--deep
     background: $c-deep
-
-
-.title
-  &--normal
-
-  &--header-parallax
-    position: absolute
-    left: 50%
-    top: 40%
-    transform: translate(-50%, -50%)
-    text-align: center
-    color: #fff
-    font-size: 4rem
-
-.bg
-  &--header-parallax
-    background:
-      image: url(../assets/img/bg.jpg)
-      size: auto 100%
-      position: center
-
-#idk .parallax__layer
-  &--base
-    background: #fff
